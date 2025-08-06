@@ -1,6 +1,7 @@
 package clients.customer;
 
 import catalogue.Basket;
+import catalogue.AudioEffects;
 import catalogue.Product;
 import debug.DEBUG;
 import middle.MiddleFactory;
@@ -98,6 +99,10 @@ public class CustomerModel extends Observable
    */
   public void doClear()
   {
+	String URL = "/Users/sairkohistani/git/CI553-CW-miniStore/src/buttonClick.wav";
+	AudioEffects sfx = new AudioEffects(URL);
+	sfx.play();
+	  
     String theAction = "";
     theBasket.clear();                        // Clear s. list
     theAction = "Enter Product Number";       // Set display
